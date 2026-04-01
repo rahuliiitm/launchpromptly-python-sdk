@@ -1,5 +1,8 @@
 # launchpromptly
 
+[![PyPI version](https://img.shields.io/pypi/v/launchpromptly.svg)](https://pypi.org/project/launchpromptly/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/launchpromptly.svg)](https://pypi.org/project/launchpromptly/)
+
 Official Python SDK for [LaunchPromptly](https://launchpromptly.dev) — runtime safety layer for LLM applications. PII redaction, prompt injection detection, cost guards, and content filtering with zero core dependencies.
 
 ## Install

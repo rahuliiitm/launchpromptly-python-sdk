@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "launchpromptly"
-version = "0.6.0"
+version = "0.6.1"
 description = "LaunchPromptly Python SDK — LLM privacy & security toolkit"
 readme = "README.md"
 license = "MIT"
@@ -44,7 +44,7 @@ launchpromptly = "launchpromptly.ml.cli:main"
 
 [project.urls]
 Homepage = "https://launchpromptly.dev"
-Repository = "https://github.com/rahuliiitm/python-sdk"
+Repository = "https://github.com/rahuliiitm/launchpromptly-python-sdk"
 
 [tool.setuptools.packages.find]
 include = ["launchpromptly*"]
