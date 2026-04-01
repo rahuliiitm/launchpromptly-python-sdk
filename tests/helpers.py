@@ -47,8 +47,8 @@ class TestContext:
 
 def setup() -> TestContext:
     """Bootstrap fresh test data: user, project, prompt, version, deployment, API key."""
-    email = "rahul.iiitm06@gmail.com"
-    password = "12345678"
+    email = os.environ.get("TEST_EMAIL", "test@example.com")
+    password = os.environ.get("TEST_PASSWORD", "changeme")
 
     # 1. Login
     auth = api_call("/auth/login", method="POST", body={"email": email, "password": password})
