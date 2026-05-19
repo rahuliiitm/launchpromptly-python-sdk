@@ -438,6 +438,29 @@ __all__ = [
     "extract_gemini_function_calls",
     "extract_gemini_stream_chunk",
     "extract_gemini_content_text",
+    # Multimodal scanning
+    "MediaPart",
+    "MediaPartSource",
+    "ImageScanResult",
+    "PdfScanResult",
+    "FileScanResult",
+    "ImagePrefilter",
+    "PdfExtractor",
+    "FileExtractor",
+    "MultimodalScanner",
 ]
+
+# Multimodal scanning
+from .multimodal import (
+    MediaPart,
+    MediaPartSource,
+    ImageScanResult,
+    PdfScanResult,
+    FileScanResult,
+    ImagePrefilter,
+    PdfExtractor,
+    FileExtractor,
+    MultimodalScanner,
+)
 
 __version__ = "0.5.0"

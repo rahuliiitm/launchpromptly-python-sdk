@@ -372,6 +372,18 @@ class _WrappedCompletions:
     async def create(self, **kwargs: Any) -> Any:
         security = resolve_security_options(self._opts.security) if self._opts.security else None
 
+        # Phase 2: mlMode deprecation — 'inline' is deprecated; 'sidecar' is the new default.
+        # Removal target: v3 / December 2026.
+        if security and getattr(security, 'ml_mode', None) == 'inline':
+            import warnings
+            warnings.warn(
+                "[LaunchPromptly] DEPRECATION: ml_mode='inline' is deprecated and will be removed in v3 "
+                "(December 2026). The default is now ml_mode='sidecar'. "
+                "Migration guide: https://docs.launchpromptly.dev/migration/ml-mode-sidecar",
+                DeprecationWarning,
+                stacklevel=4,
+            )
+
         # Lazy ML provider initialization (runs once on first call)
         if security and security.use_ml and not self._ml_init_done:
             from ._internal.ml_resolver import create_ml_providers, merge_ml_providers

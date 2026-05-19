@@ -11,3 +11,4 @@ build/
 venv/
 .claude/
 scripts/output/
+.venv-local/
